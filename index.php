@@ -17,12 +17,6 @@
 
 <canvas id="bgCanvas"></canvas>
 
-<div class="lang-toggle">
-    <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
-    <div class="lang-sep"></div>
-    <button class="lang-btn" id="btn-fa" onclick="setLang('fa')">FA</button>
-</div>
-
 <nav>
     <div class="nav-inner">
         <div class="nav-logo">AR_</div>
@@ -47,11 +41,8 @@
                         <ellipse cx="40" cy="68" rx="26" ry="18" fill="#B8C8DC" />
                     </svg>
                 </div>
-                <!-- EN name -->
                 <div class="profile-name">Ahmadreza</div>
-                <!-- FA name placeholder — shown in Persian mode -->
-                <div class="profile-name-fa" id="profile-name-fa">احمدرضا</div>
-                <div class="profile-role" id="profile-role">GIS &amp; FME<br />Specialist</div>
+                <div class="profile-role">GIS &amp; FME<br />Specialist</div>
                 <div class="profile-divider"></div>
                 <div class="profile-socials">
                     <a href="mailto:ahmadreza@email.com" class="soc-btn" title="Email">
@@ -102,19 +93,19 @@
             </div>
 
             <div class="section-block" id="about">
-                <div class="section-label" id="about-label">About Me</div>
-                <div class="section-title" id="about-title">A GIS brain with a developer's hands.</div>
-                <p class="about-text" id="about-p1">
+                <div class="section-label">About Me</div>
+                <div class="section-title">A GIS brain with a developer's hands.</div>
+                <p class="about-text">
                     Over the years I've moved from traditional GIS work into a more technical, developer-leaning role. FME has been a central part of that journey — pushing it beyond visual workflows by embedding Python scripts, integrating APIs, and building systems that respond dynamically to data and context.
                 </p>
-                <p class="about-text" id="about-p2">
+                <p class="about-text">
                     I also work extensively with ArcGIS and ArcPy, automating spatial tasks and creating clean, efficient pipelines. What keeps me interested isn't just the tech — it's the challenge of making systems smoother, smarter, and more reliable.
                 </p>
             </div>
 
             <div class="section-block" id="skills">
-                <div class="section-label" id="skills-label">What I Work With</div>
-                <div class="section-title" id="skills-title">Tools &amp; Technologies</div>
+                <div class="section-label">What I Work With</div>
+                <div class="section-title">Tools &amp; Technologies</div>
                 <div class="skills-grid">
                     <div class="skill-badge sk1"><span class="bd" style="background:var(--yellow)"></span>FME Platform</div>
                     <div class="skill-badge sk2"><span class="bd" style="background:var(--grey-light)"></span>ArcGIS</div>
@@ -128,8 +119,8 @@
             </div>
 
             <div class="section-block" id="projects">
-                <div class="section-label" id="proj-label">Work</div>
-                <div class="section-title" id="proj-title">Selected Projects</div>
+                <div class="section-label">Work</div>
+                <div class="section-title">Selected Projects</div>
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="proj-num" id="p1-num">01 — PIPELINE</div>
@@ -167,8 +158,8 @@
             </div>
 
             <div class="section-block" id="blog">
-                <div class="section-label" id="blog-label">Writing</div>
-                <div class="section-title" id="blog-title">Notes from the workflow.</div>
+                <div class="section-label">Writing</div>
+                <div class="section-title">Notes from the workflow.</div>
 
                 <?php
                 // Simple blog loop: latest posts.
@@ -313,91 +304,6 @@ function frame(){
 resize();
 buildContours();
 requestAnimationFrame(frame);
-
-// ── LANGUAGE SWITCHER ──
-const content = {
-  en:{
-    navAbout:'About',navSkills:'Skills',navProjects:'Projects',navBlog:'Blog',
-    heroTag:'GIS & FME Specialist',
-    heroTitle:'I map things,<br/><span>automate stuff,</span><br/>& break systems<br/>to fix them better.',
-    heroSub:'Code, logic, and just enough frustration to keep it interesting. Turning messy spatial problems into clean, repeatable solutions.',
-    heroCta1:'See My Work',heroCta2:'Projects',
-    aboutLabel:'About Me',aboutTitle:'A GIS brain with a developer\'s hands.',
-    aboutP1:'Over the years I\'ve moved from traditional GIS work into a more technical, developer-leaning role. FME has been a central part of that journey — pushing it beyond visual workflows by embedding Python scripts, integrating APIs, and building systems that respond dynamically to data and context.',
-    aboutP2:'I also work extensively with ArcGIS and ArcPy, automating spatial tasks and creating clean, efficient pipelines. What keeps me interested isn\'t just the tech — it\'s the challenge of making systems smoother, smarter, and more reliable.',
-    skillsLabel:'What I Work With',skillsTitle:'Tools & Technologies',
-    projLabel:'Work',projTitle:'Selected Projects',
-    p1num:'01 — PIPELINE',p1title:'Dynamic FME Pipeline System',p1desc:'A context-aware FME workflow integrating live API data, Python logic, and dynamic routing for large-scale spatial transformations.',
-    p2num:'02 — AUTOMATION',p2title:'ArcPy Automation Suite',p2desc:'ArcPy scripts automating repetitive cartographic and spatial analysis tasks, significantly reducing manual processing time.',
-    p3num:'03 — ETL',p3title:'Spatial ETL Redesign',p3desc:'Rebuilt a legacy GIS pipeline from scratch — replacing brittle steps with a robust, repeatable ETL process that scales with data.',
-    p4num:'04 — INTEGRATION',p4title:'API-Connected GIS Workflow',p4desc:'Live-data GIS system pulling from REST APIs, processing spatial data on the fly and outputting clean structured results.',
-    blogLabel:'Writing',blogTitle:'Notes from the workflow.',
-    footerText:'Ahmadreza — GIS & FME Specialist · 2026',
-    profileRole:'GIS & FME<br/>Specialist',
-  },
-  fa:{
-    navAbout:'درباره او',navSkills:'مهارت‌ها',navProjects:'پروژه‌ها',navBlog:'بلاگ',
-    heroTag:'متخصص GIS و FME',
-    heroTitle:'نقشه می‌کشم،<br/><span>اتوماسیون می‌سازم،</span><br/>و سیستم‌ها را می‌شکنم<br/>تا بهتر بسازمشان.',
-    heroSub:'کد، منطق، و درست به اندازه‌ای از چالش که کار را جذاب نگه دارد. تبدیل مسائل پیچیده مکانی به راه‌حل‌های ساده و قابل تکرار.',
-    heroCta1:'مشاهده پروژه‌ها',heroCta2:'پروژه‌ها',
-    aboutLabel:'درباره من',aboutTitle:'ذهن GIS، دست توسعه‌دهنده.',
-    aboutP1:'در طول سال‌ها از کار سنتی GIS به نقشی فنی‌تر و توسعه‌محور رسیده‌ام. FME بخش مرکزی این مسیر بوده — فراتر از محیط بصری، با تعبیه اسکریپت‌های پایتون، اتصال به APIها، و ساخت سیستم‌هایی که به صورت پویا به داده و زمینه پاسخ می‌دهند.',
-    aboutP2:'همچنین به‌طور گسترده با ArcGIS و ArcPy کار می‌کنم، وظایف مکانی را خودکار می‌سازم و خطوط لوله بهینه‌ای می‌سازم. آنچه مرا علاقه‌مند نگه می‌دارد چالش بهتر، هوشمندتر و قابل‌اطمینان‌تر کردن سیستم‌هاست.',
-    skillsLabel:'با چه ابزارهایی کار می‌کنم',skillsTitle:'ابزارها و فناوری‌ها',
-    projLabel:'کارها',projTitle:'پروژه‌های منتخب',
-    p1num:'۰۱ — خط لوله',p1title:'سیستم پویای FME Pipeline',p1desc:'یک گردش‌کار FME متناسب با داده که API زنده، منطق پایتون و مسیریابی پویا را یکپارچه می‌کند.',
-    p2num:'۰۲ — اتوماسیون',p2title:'مجموعه اسکریپت‌های ArcPy',p2desc:'مجموعه‌ای از اسکریپت‌های ArcPy برای خودکارسازی وظایف تکراری تحلیل مکانی.',
-    p3num:'۰۳ — ETL',p3title:'بازطراحی ETL مکانی',p3desc:'بازنویسی کامل یک خط لوله قدیمی GIS — جایگزینی مراحل دستی شکننده با فرآیند ETL قوی و قابل تکرار.',
-    p4num:'۰۴ — یکپارچه‌سازی',p4title:'گردش‌کار GIS متصل به API',p4desc:'سیستم GIS با داده زنده که از REST APIهای خارجی داده می‌کشد و نتایج ساختاریافته تولید می‌کند.',
-    blogLabel:'یادداشت‌ها',blogTitle:'یادداشت‌هایی از کار روزمره.',
-    footerText:'احمدرضا — متخصص GIS و FME · ۱۴۰۵',
-    profileRole:'متخصص GIS<br/>و FME',
-  }
-};
-
-function setLang(lang){
-  const d=document, t=content[lang], isFA=lang==='fa';
-  document.body.classList.toggle('rtl',isFA);
-  d.getElementById('btn-en').classList.toggle('active',lang==='en');
-  d.getElementById('btn-fa').classList.toggle('active',lang==='fa');
-  d.getElementById('nav-about').textContent=t.navAbout;
-  d.getElementById('nav-skills').textContent=t.navSkills;
-  d.getElementById('nav-projects').textContent=t.navProjects;
-  const navBlog = d.getElementById('nav-blog');
-  if(navBlog) navBlog.textContent = t.navBlog;
-  d.getElementById('hero-tag').textContent=t.heroTag;
-  d.getElementById('hero-title').innerHTML=t.heroTitle;
-  d.getElementById('hero-sub').textContent=t.heroSub;
-  d.getElementById('hero-cta1').textContent=t.heroCta1;
-  d.getElementById('hero-cta2').textContent=t.heroCta2;
-  d.getElementById('about-label').textContent=t.aboutLabel;
-  d.getElementById('about-title').textContent=t.aboutTitle;
-  d.getElementById('about-p1').textContent=t.aboutP1;
-  d.getElementById('about-p2').textContent=t.aboutP2;
-  d.getElementById('skills-label').textContent=t.skillsLabel;
-  d.getElementById('skills-title').textContent=t.skillsTitle;
-  d.getElementById('proj-label').textContent=t.projLabel;
-  d.getElementById('proj-title').textContent=t.projTitle;
-  d.getElementById('p1-num').textContent=t.p1num;
-  d.getElementById('p1-title').textContent=t.p1title;
-  d.getElementById('p1-desc').textContent=t.p1desc;
-  d.getElementById('p2-num').textContent=t.p2num;
-  d.getElementById('p2-title').textContent=t.p2title;
-  d.getElementById('p2-desc').textContent=t.p2desc;
-  d.getElementById('p3-num').textContent=t.p3num;
-  d.getElementById('p3-title').textContent=t.p3title;
-  d.getElementById('p3-desc').textContent=t.p3desc;
-  d.getElementById('p4-num').textContent=t.p4num;
-  d.getElementById('p4-title').textContent=t.p4title;
-  d.getElementById('p4-desc').textContent=t.p4desc;
-  const blogLabel = d.getElementById('blog-label');
-  const blogTitle = d.getElementById('blog-title');
-  if(blogLabel) blogLabel.textContent = t.blogLabel;
-  if(blogTitle) blogTitle.textContent = t.blogTitle;
-  d.getElementById('footer-text').textContent=t.footerText;
-  d.getElementById('profile-role').innerHTML=t.profileRole;
-}
 </script>
 
 <?php wp_footer(); ?>
