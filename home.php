@@ -18,7 +18,7 @@
 
 <nav>
     <div class="nav-inner">
-        <div class="nav-logo">AR_</div>
+        <a class="nav-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">AR_</a>
         <div class="nav-links">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">About</a>
             <a href="<?php echo esc_url( home_url( '/#skills' ) ); ?>">Skills</a>
@@ -35,10 +35,7 @@
         <div class="left-panel">
             <div class="profile-card">
                 <div class="profile-photo">
-                    <svg viewBox="0 0 80 80" fill="none">
-                        <circle cx="40" cy="28" r="16" fill="#B8C8DC" />
-                        <ellipse cx="40" cy="68" rx="26" ry="18" fill="#B8C8DC" />
-                    </svg>
+                    <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/profile-photo.png' ); ?>" alt="Ahmadreza" />
                 </div>
                 <div class="profile-name">Ahmadreza</div>
                 <div class="profile-role">GIS &amp; FME<br />Specialist</div>
@@ -101,7 +98,7 @@
                                     </a>
                                 </h2>
                                 <div class="blog-body">
-                                    <?php the_excerpt(); ?>
+                                    <?php the_content(); ?>
                                 </div>
                             </article>
                         <?php endwhile; ?>
