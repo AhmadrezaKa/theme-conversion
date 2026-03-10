@@ -162,19 +162,19 @@
                 <div class="section-title">Notes from the workflow.</div>
 
                 <?php
-                // Simple blog loop: latest posts.
-                $blog_query = new WP_Query(
+                // Show a small teaser: at most 2 latest posts.
+                $teaser_query = new WP_Query(
                     [
                         'post_type'      => 'post',
-                        'posts_per_page' => 5,
+                        'posts_per_page' => 2,
                     ]
                 );
 
-                if ( $blog_query->have_posts() ) : ?>
+                if ( $teaser_query->have_posts() ) : ?>
                     <div class="blog-list">
                         <?php
-                        while ( $blog_query->have_posts() ) :
-                            $blog_query->the_post();
+                        while ( $teaser_query->have_posts() ) :
+                            $teaser_query->the_post();
                             ?>
                             <article <?php post_class( 'blog-card' ); ?>>
                                 <div class="blog-meta">
@@ -186,7 +186,7 @@
                                     </a>
                                 </h3>
                                 <p class="blog-body">
-                                    <?php echo esc_html( wp_trim_words( get_the_excerpt(), 30 ) ); ?>
+                                    <?php echo esc_html( wp_trim_words( get_the_excerpt(), 18 ) ); ?>
                                 </p>
                             </article>
                         <?php endwhile; ?>
@@ -197,6 +197,12 @@
                     ?>
                     <p class="about-text"><?php esc_html_e( 'No posts published yet.', 'ahmadreza-portfolio' ); ?></p>
                 <?php endif; ?>
+
+                <p class="about-text" style="margin-top:18px;">
+                    <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="blog-title" style="text-decoration:underline;">
+                        View all posts →
+                    </a>
+                </p>
             </div>
 
         </div>
