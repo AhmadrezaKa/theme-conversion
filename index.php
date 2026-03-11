@@ -40,6 +40,12 @@
                     <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/profile-photo.png' ); ?>" alt="Ahmadreza" />
                 </div>
                 <div class="profile-name">Ahmadreza</div>
+                <div class="profile-location" id="profile-location">
+                    <svg viewBox="0 0 12 16" width="9" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 0a6 6 0 0 0-6 6c0 4 6 10 6 10s6-6 6-10A6 6 0 0 0 6 0zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="#8A9BB5"/>
+                    </svg>
+                    The Netherlands
+                </div>
                 <div class="profile-role">GIS &amp; FME<br />Specialist</div>
                 <div class="profile-divider"></div>
                 <div class="profile-socials">
