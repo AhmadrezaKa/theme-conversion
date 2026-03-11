@@ -127,21 +127,19 @@
             </div>
 
             <div class="section-block" id="education">
-                <div class="section-label">Education</div>
-                <div class="section-title">Academic Background</div>
-                
-                <div class="education-item">
-                    <div class="edu-degree">Master of Science</div>
-                    <div class="edu-university">[University Name]</div>
-                    <div class="edu-field">Geographic Information Systems</div>
-                    <div class="edu-thesis">
-                        <span class="thesis-label">Thesis:</span>
-                        <a href="#" class="thesis-link" target="_blank" title="View Thesis">
+                <div class="section-label" id="edu-label">Education</div>
+                <div class="section-title" id="edu-title">Academic Background</div>
+                <div class="edu-block">
+                    <div class="edu-uni" id="edu-uni">University of Twente (ITC), The Netherlands</div>
+                    <div class="edu-degree" id="edu-degree">MSc — Geo-information Science and Earth Observation</div>
+                    <div class="edu-thesis-row">
+                        <div class="edu-thesis-label" id="edu-thesis-label">Thesis</div>
+                        <div class="edu-thesis-title" id="edu-thesis-title">Your thesis title goes here — replace with actual title</div>
+                        <a href="#" class="edu-thesis-link" id="edu-thesis-link" target="_blank" title="View Thesis">
                             <svg viewBox="0 0 20 20" class="thesis-icon">
                                 <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
                                 <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
                             </svg>
-                            View Thesis
                         </a>
                     </div>
                 </div>
