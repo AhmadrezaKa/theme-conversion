@@ -103,15 +103,25 @@
             <div class="section-block" id="skills">
                 <div class="section-label">What I Work With</div>
                 <div class="section-title">Tools &amp; Technologies</div>
-                <div class="skills-grid">
-                    <div class="skill-badge sk1"><span class="bd" style="background:var(--yellow)"></span>FME Platform</div>
-                    <div class="skill-badge sk2"><span class="bd" style="background:var(--grey-light)"></span>ArcGIS</div>
-                    <div class="skill-badge sk1"><span class="bd" style="background:var(--yellow)"></span>ArcPy</div>
-                    <div class="skill-badge sk2"><span class="bd" style="background:var(--grey-light)"></span>Python</div>
-                    <div class="skill-badge sk1"><span class="bd" style="background:var(--yellow)"></span>REST APIs</div>
-                    <div class="skill-badge sk2"><span class="bd" style="background:var(--grey-light)"></span>Spatial Analysis</div>
-                    <div class="skill-badge sk1"><span class="bd" style="background:var(--yellow)"></span>ETL Pipelines</div>
-                    <div class="skill-badge sk2"><span class="bd" style="background:var(--grey-light)"></span>Data Automation</div>
+                
+                <div class="skills-category">
+                    <h3 class="skills-subtitle">Core Platforms</h3>
+                    <div class="skills-grid">
+                        <div class="skill-badge sk1"><span class="bd" style="background:var(--yellow)"></span>FME Platform</div>
+                        <div class="skill-badge sk2"><span class="bd" style="background:var(--grey-light)"></span>ArcGIS</div>
+                        <div class="skill-badge sk1"><span class="bd" style="background:var(--yellow)"></span>ArcPy</div>
+                        <div class="skill-badge sk2"><span class="bd" style="background:var(--grey-light)"></span>Python</div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="skills-subtitle">Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-badge sk1"><span class="bd" style="background:var(--yellow)"></span>REST APIs</div>
+                        <div class="skill-badge sk2"><span class="bd" style="background:var(--grey-light)"></span>Spatial Analysis</div>
+                        <div class="skill-badge sk1"><span class="bd" style="background:var(--yellow)"></span>ETL Pipelines</div>
+                        <div class="skill-badge sk2"><span class="bd" style="background:var(--grey-light)"></span>Data Automation</div>
+                    </div>
                 </div>
             </div>
 
@@ -154,54 +164,7 @@
                 </div>
             </div>
 
-            <div class="section-block" id="blog">
-                <div class="section-label">Writing</div>
-                <div class="section-title">Notes from the workflow.</div>
-
-                <?php
-                // Show a small teaser: at most 2 latest posts.
-                $teaser_query = new WP_Query(
-                    [
-                        'post_type'      => 'post',
-                        'posts_per_page' => 2,
-                    ]
-                );
-
-                if ( $teaser_query->have_posts() ) : ?>
-                    <div class="blog-list">
-                        <?php
-                        while ( $teaser_query->have_posts() ) :
-                            $teaser_query->the_post();
-                            ?>
-                            <article <?php post_class( 'blog-card' ); ?>>
-                                <div class="blog-meta">
-                                    <?php echo esc_html( get_the_date() ); ?>
-                                </div>
-                                <h3 class="blog-title">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php the_title(); ?>
-                                    </a>
-                                </h3>
-                                <p class="blog-body">
-                                    <?php echo esc_html( wp_trim_words( get_the_excerpt(), 18 ) ); ?>
-                                </p>
-                            </article>
-                        <?php endwhile; ?>
-                    </div>
-                    <?php
-                    wp_reset_postdata();
-                else :
-                    ?>
-                    <p class="about-text"><?php esc_html_e( 'No posts published yet.', 'ahmadreza-portfolio' ); ?></p>
-                <?php endif; ?>
-
-                <p class="about-text" style="margin-top:18px;">
-                    <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="blog-title" style="text-decoration:underline;">
-                        View all posts →
-                    </a>
-                </p>
-            </div>
-
+            
         </div>
     </div>
 </div>

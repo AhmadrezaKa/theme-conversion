@@ -170,6 +170,9 @@ body.blog .layout{
 .about-text+.about-text{margin-top:12px;}
 
 /* ── SKILLS ── */
+.skills-category{margin-bottom:24px;}
+.skills-category:last-child{margin-bottom:0;}
+.skills-subtitle{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:12px;letter-spacing:-0.3px;}
 .skills-grid{display:flex;flex-wrap:wrap;gap:9px;}
 .skill-badge{display:flex;align-items:center;gap:8px;padding:8px 15px;border-radius:3px;font-weight:500;font-size:0.8rem;border:1px solid;transition:transform 0.2s;cursor:default;}
 .skill-badge:hover{transform:translateY(-2px);}
@@ -178,7 +181,7 @@ body.blog .layout{
 .bd{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
 
 /* ── PROJECTS ── */
-.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.projects-grid{display:grid;grid-template-columns:1fr;gap:14px;}
 .project-card{background:var(--navy-card);border:1px solid var(--navy-light);border-radius:6px;padding:20px;position:relative;overflow:hidden;transition:transform 0.22s,box-shadow 0.22s,border-color 0.22s;cursor:pointer;}
 .project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--yellow),rgba(245,200,66,0.1));}
 .project-card:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,0.3);border-color:rgba(245,200,66,0.18);}
