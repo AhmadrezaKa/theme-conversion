@@ -23,6 +23,7 @@
         <div class="nav-links">
             <a href="#about" id="nav-about">About</a>
             <a href="#skills" id="nav-skills">Skills</a>
+            <a href="#education" id="nav-education">Education</a>
             <a href="#projects" id="nav-projects">Projects</a>
             <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" id="nav-blog">Blog</a>
         </div>
@@ -121,6 +122,27 @@
                         <div class="skill-badge sk2"><span class="bd" style="background:var(--grey-light)"></span>Spatial Analysis</div>
                         <div class="skill-badge sk1"><span class="bd" style="background:var(--yellow)"></span>ETL Pipelines</div>
                         <div class="skill-badge sk2"><span class="bd" style="background:var(--grey-light)"></span>Data Automation</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-block" id="education">
+                <div class="section-label">Education</div>
+                <div class="section-title">Academic Background</div>
+                
+                <div class="education-item">
+                    <div class="edu-degree">Master of Science</div>
+                    <div class="edu-university">[University Name]</div>
+                    <div class="edu-field">Geographic Information Systems</div>
+                    <div class="edu-thesis">
+                        <span class="thesis-label">Thesis:</span>
+                        <a href="#" class="thesis-link" target="_blank" title="View Thesis">
+                            <svg viewBox="0 0 20 20" class="thesis-icon">
+                                <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                                <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                            </svg>
+                            View Thesis
+                        </a>
                     </div>
                 </div>
             </div>

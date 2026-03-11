@@ -65,9 +65,9 @@ nav{
   max-width:calc(var(--max-col)*2 + 3px);
 }
 
-/* Blog page: narrower profile column, wider content */
+/* Blog page: same profile column width as main page, wider content */
 body.blog .layout{
-  grid-template-columns:minmax(0,260px) 3px minmax(0,840px);
+  grid-template-columns:minmax(0,var(--max-col)) 3px minmax(0,840px);
 }
 
 /* ── SPINE ── */
@@ -179,6 +179,19 @@ body.blog .layout{
 .sk1{background:rgba(245,200,66,0.07);border-color:rgba(245,200,66,0.22);color:var(--yellow);}
 .sk2{background:rgba(138,155,181,0.07);border-color:rgba(138,155,181,0.18);color:var(--grey-light);}
 .bd{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+
+/* ── EDUCATION ── */
+.education-item{background:var(--navy-card);border:1px solid var(--navy-light);border-radius:6px;padding:24px;position:relative;overflow:hidden;transition:transform 0.22s,box-shadow 0.22s,border-color 0.22s;}
+.education-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--yellow),rgba(245,200,66,0.1));}
+.education-item:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2);border-color:rgba(245,200,66,0.15);}
+.edu-degree{font-size:1.1rem;font-weight:700;color:var(--yellow);margin-bottom:6px;font-family:'Roboto Mono',monospace;letter-spacing:1px;}
+.edu-university{font-size:1rem;font-weight:700;color:var(--white);margin-bottom:4px;}
+.edu-field{font-size:0.85rem;color:var(--grey-light);margin-bottom:12px;font-weight:300;}
+.edu-thesis{display:flex;align-items:center;gap:8px;}
+.thesis-label{font-size:0.8rem;color:var(--grey);font-weight:500;}
+.thesis-link{display:flex;align-items:center;gap:6px;color:var(--yellow);text-decoration:none;font-size:0.8rem;font-weight:500;transition:color 0.2s;}
+.thesis-link:hover{color:var(--white);}
+.thesis-icon{width:14px;height:14px;fill:currentColor;}
 
 /* ── PROJECTS ── */
 .projects-grid{display:grid;grid-template-columns:1fr;gap:14px;}
