@@ -44,6 +44,8 @@ nav{
   padding:0 48px;
 }
 .nav-logo{font-weight:900;font-size:1.3rem;color:var(--yellow);font-family:'Roboto Mono',monospace;text-decoration:none;cursor:pointer;}
+.cursor-blink{color:var(--yellow);animation:blink 1s infinite;}
+@keyframes blink{0%,50%{opacity:1;}51%,100%{opacity:0;}}
 .nav-links{display:flex;gap:32px;}
 .nav-links a{text-decoration:none;color:var(--grey-light);font-weight:500;font-size:0.83rem;letter-spacing:0.5px;transition:color 0.2s;}
 .nav-links a:hover{color:var(--yellow);}

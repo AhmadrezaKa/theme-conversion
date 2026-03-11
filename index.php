@@ -19,7 +19,7 @@
 
 <nav>
     <div class="nav-inner">
-        <a class="nav-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">AR_</a>
+        <a class="nav-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">AR_<span class="cursor-blink">_</span></a>
         <div class="nav-links">
             <a href="#about" id="nav-about">About</a>
             <a href="#skills" id="nav-skills">Skills</a>

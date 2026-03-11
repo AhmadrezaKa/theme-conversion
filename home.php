@@ -18,7 +18,7 @@
 
 <nav>
     <div class="nav-inner">
-        <a class="nav-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">AR_</a>
+        <a class="nav-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">AR_<span class="cursor-blink">_</span></a>
         <div class="nav-links">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>">About</a>
             <a href="<?php echo esc_url( home_url( '/#skills' ) ); ?>">Skills</a>
