@@ -214,6 +214,56 @@ body.blog .layout{
 .blog-meta{font-size:0.75rem;color:var(--grey);margin-bottom:6px;}
 .blog-body{font-size:0.85rem;color:var(--grey-light);line-height:1.7;}
 
+/* ── SINGLE POST ── */
+.post-meta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;font-size:0.8rem;color:var(--grey);}
+.post-date, .post-author, .post-categories{color:var(--grey-light);}
+.post-title{font-size:2.2rem;font-weight:900;color:var(--white);margin-bottom:24px;line-height:1.1;}
+.post-content{font-size:0.95rem;line-height:1.8;color:var(--grey-light);margin-bottom:30px;}
+.post-content h1, .post-content h2, .post-content h3{color:var(--white);margin-top:32px;margin-bottom:16px;}
+.post-content h2{font-size:1.6rem;}
+.post-content h3{font-size:1.3rem;}
+.post-content p{margin-bottom:16px;}
+.post-content a{color:var(--yellow);text-decoration:none;}
+.post-content a:hover{text-decoration:underline;}
+.post-tags{margin-top:20px;padding-top:20px;border-top:1px solid var(--navy-light);}
+.tags-label{font-size:0.8rem;color:var(--grey);margin-right:8px;}
+.post-tags a{color:var(--grey-light);text-decoration:none;font-size:0.8rem;margin-right:8px;}
+.post-tags a:hover{color:var(--yellow);}
+
+/* ── COMMENTS ── */
+.comments-section{margin-top:40px;padding-top:30px;border-top:1px solid var(--navy-light);}
+.comments-title{font-size:1.4rem;font-weight:700;color:var(--white);margin-bottom:24px;}
+.comment-list{list-style:none;padding:0;margin:0 0 30px;}
+.comment-body{background:var(--navy-card);border:1px solid var(--navy-light);border-radius:6px;padding:20px;margin-bottom:16px;}
+.comment-author{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
+.comment-author img{border-radius:50%;width:50px;height:50px;}
+.comment-author .fn{font-weight:700;color:var(--white);}
+.comment-metadata{font-size:0.75rem;color:var(--grey);margin-bottom:12px;}
+.comment-content{font-size:0.9rem;line-height:1.6;color:var(--grey-light);}
+.comment-awaiting-moderation{font-style:italic;color:var(--yellow);margin:12px 0;}
+.reply{margin-top:12px;}
+.reply a{color:var(--yellow);text-decoration:none;font-size:0.8rem;font-weight:500;}
+.reply a:hover{text-decoration:underline;}
+
+/* ── COMMENT FORM ── */
+.comment-reply-title{font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:20px;}
+.comment-notes{font-size:0.8rem;color:var(--grey);margin-bottom:20px;}
+.comment-form-comment label, .comment-form-author label, .comment-form-email label, .comment-form-url label{display:block;font-weight:500;color:var(--grey-light);margin-bottom:6px;}
+.comment-form-comment textarea{width:100%;background:var(--navy-light);border:1px solid var(--navy-card);border-radius:4px;padding:12px;color:var(--white);font-family:inherit;font-size:0.9rem;resize:vertical;}
+.comment-form-author input, .comment-form-email input, .comment-form-url input{width:100%;background:var(--navy-light);border:1px solid var(--navy-card);border-radius:4px;padding:12px;color:var(--white);font-family:inherit;font-size:0.9rem;}
+.comment-form-author, .comment-form-email, .comment-form-url{margin-bottom:16px;}
+.comment-form-comment{margin-bottom:20px;}
+.form-submit{margin-top:20px;}
+.required{color:var(--yellow);}
+
+/* ── POST NAVIGATION ── */
+.post-navigation{display:flex;justify-content:space-between;margin-top:40px;padding-top:20px;border-top:1px solid var(--navy-light);}
+.nav-prev, .nav-next{flex:1;}
+.nav-prev{text-align:left;}
+.nav-next{text-align:right;}
+.nav-prev a, .nav-next a{color:var(--grey-light);text-decoration:none;font-size:0.9rem;font-weight:500;}
+.nav-prev a:hover, .nav-next a:hover{color:var(--yellow);}
+
 /* ── FOOTER ── */
 .footer-outer{position:relative;z-index:1;border-top:1px solid var(--navy-light);}
 .footer-inner{max-width:calc(var(--max-col)*2 + 3px);margin:0 auto;padding:18px 48px;}
