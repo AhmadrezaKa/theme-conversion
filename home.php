@@ -37,30 +37,25 @@
                 <div class="profile-photo">
                     <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/profile-photo.png' ); ?>" alt="Ahmadreza" />
                 </div>
-                <div class="profile-name">Ahmadreza</div>
+                <div class="profile-name">Ahmadreza Karim</div>
                 <div class="profile-role">GIS &amp; FME<br />Specialist</div>
                 <div class="profile-divider"></div>
                 <div class="profile-socials">
-                    <a href="mailto:ahmadreza@email.com" class="soc-btn" title="Email">
+                    <a href="mailto:ahmadrezakarim@gmail.com" class="soc-btn" title="Email">
                         <svg viewBox="0 0 20 20">
                             <path d="M2 4a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 0l6 5 6-5H4zm0 2v8h12V6l-6 5-6-5z" />
                         </svg>
                     </a>
-                    <a href="#" class="soc-btn" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/ahmadreza-karim/" class="soc-btn" title="LinkedIn">
                         <svg viewBox="0 0 20 20">
                             <path d="M16 2H4a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2zM7 15H5v-5h2v5zm-1-5.8a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zm9 5.8h-2v-2.6c0-.8-.3-1.4-1-1.4-.6 0-.9.4-1 .8v3.2H9V10h2v.8c.3-.5.9-1 1.8-1 1.3 0 2.2.9 2.2 2.7V15z" />
                         </svg>
                     </a>
-                    <a href="#" class="soc-btn" title="GitHub">
+                    <a href="https://github.com/AhmadrezaKa" class="soc-btn" title="GitHub">
                         <svg viewBox="0 0 20 20">
                             <path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm0 1.5c3.59 0 6.5 2.91 6.5 6.5 0 2.89-1.88 5.35-4.49 6.22-.32-.06-.44-.22-.44-.44v-1.58c0-.54-.18-.89-.38-1.07 1.27-.14 2.6-.62 2.6-2.8 0-.62-.22-1.13-.59-1.52.06-.15.26-.72-.06-1.5 0 0-.48-.15-1.58.59A5.46 5.46 0 0010 8.4c-.49 0-.98.07-1.44.2-1.1-.74-1.58-.59-1.58-.59-.32.78-.12 1.35-.06 1.5-.37.39-.59.9-.59 1.52 0 2.17 1.32 2.66 2.58 2.81-.16.14-.31.39-.37.76-.33.15-1.18.41-1.7-.49 0 0-.31-.56-.9-.6 0 0-.57-.01-.04.36 0 0 .38.18.65.85 0 0 .34 1.04 1.98.69v1.05c0 .22-.12.38-.43.44A6.502 6.502 0 013.5 10c0-3.59 2.91-6.5 6.5-6.5z" />
                         </svg>
-                    </a>
-                    <a href="#" class="soc-btn" title="ResearchGate">
-                        <svg viewBox="0 0 20 20">
-                            <path d="M10 2C5.58 2 2 5.58 2 10s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1 13v-1.06c2.26-.44 4-2.43 4-4.94 0-2.76-2.24-5-5-5S5 7.24 5 10c0 2.51 1.74 4.5 4 4.94V15H6v-1h3V9.5H7V8l3-1 3 1v1.5h-2V14h3v1h-3z" />
-                        </svg>
-                    </a>
+                    </a>                    
                 </div>
             </div>
         </div>
@@ -124,7 +119,7 @@
 
 <div class="footer-outer">
     <div class="footer-inner">
-        <footer>Ahmadreza — GIS &amp; FME Specialist · <?php echo esc_html( date_i18n( 'Y' ) ); ?></footer>
+        <footer>Ahmadreza Karim— GIS &amp; FME Specialist · <?php echo esc_html( date_i18n( 'Y' ) ); ?></footer>
     </div>
 </div>
 
